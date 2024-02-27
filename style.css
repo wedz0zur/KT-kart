@@ -1,0 +1,141 @@
+
+.main{
+    display: flex;
+}
+
+.inp{
+    width: 200px;
+    height: 220px;
+    border: solid 1px;
+}
+
+.in{
+    width: 96%;
+    height: 20px;
+    margin-bottom: 10px;
+    border: solid 2px turquoise;
+}
+
+
+.but{
+    width: 150px;
+    height: 30px;
+    margin-left: 25px;
+    background-color: turquoise;
+}
+
+.card{
+    width: 380px;
+    height: 200px;
+    border: solid 3px;
+    border-radius: 25px;
+    margin-left: 50px;
+    background-image: url(rt.jpg);
+    background-size: cover;
+}
+
+
+.car1{
+    width: 80px;
+    height: 30px;
+   
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+
+.car2{
+    width: 265px;
+    height: 40px;
+    color: aliceblue;
+    margin-left: 80px;
+    margin-top: 36px;
+   
+}
+
+.carp2{
+    width: 285px;
+    height: 40px;
+    color: aliceblue;
+    margin-left: 3px;
+    margin-top: 48px;
+    font-size: 32px;
+}
+
+.ard{
+   
+    width: 330px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 17px;
+    display: flex;
+    
+}
+
+.car3{
+    
+    width: 90px;
+    height: 30px;
+    margin-right: 40px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.car4{
+    
+    width: 70px;
+    height: 30px;
+    margin-right: 10px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 14px;
+}
+
+.car5{
+    
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>KT5</title>
+</head>
+<body>
+    <div class="main">
+        <form class="inp" id="user">
+            <input type="text" name="card1Name" list="card1" class="in in1" placeholder="Название банка">
+            
+
+            <input type="text" name="card2Name" list="cardt" class="in in2" id="card2"  placeholder="тип платежной системы">
+            
+
+            <input maxlength="19" name="card3Name" type="text" class="in in3" id="in3"  placeholder="номер карты">
+            <input type="text" name="card4Name" class="in in4" id="in4"  placeholder="имя держателя карты">
+            <input type="date" name="card5Name" class="in in5" id="card">
+
+            <button class="but" type="submit" onclick="transferData(event)">ДАЛЕЕ</button>
+        </form>
+    
+        <div class="card">
+            <div class="car1"></div>
+            <div class="car2" id="car2"><p class="carp2" id="p1"></p></div>
+            <div class="ard">
+                <div class="car3" id="car3"></div>
+                <div class="car4" id="car4"></div>
+                <div class="car5" id="car5"></div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <table>
+        <tr>
+            <th>Название банка</th>
+            <th>тип платежной системы</th>
+            <th>номер карты</th>
+            <th>имя держателя карты</th>
+            <th>Дата</th>
+        </tr>
+        
+        
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+
+        document.querySelector('.in3').addEventListener('input', function() {
+                let cardNumber = this.value.replace(/\s/g, '');
+                let formattedCardNumber = cardNumber.replace(/(\d{4})/g, '$1 ').trim(); 
+                this.value = formattedCardNumber; 
+        });
+
+
+
+
+        function transferData(event) {
+            event.preventDefault();
+
+
+            let dateInput = document.querySelector('input[name="card5Name"]');
+            let car4Div = document.querySelector('.car4');
+
+            car4Div.innerHTML = dateInput.value; 
+        
+
+
+
+
+            let inputData = document.getElementById("in3").value;
+            let outputDiv = document.getElementById("p1");
+            outputDiv.innerText = inputData;
+
+            let inputData2 = document.getElementById("card2").value;
+            let outputDiv2 = document.getElementById("car3");
+            outputDiv2.innerText = inputData2;
+
+            let inputData3 = document.getElementById("in4").value;
+            let outputDiv3 = document.getElementById("car5");
+            outputDiv3.innerText = inputData3;
+
+
+
+            
+            let bankName = document.querySelector('.in1').value;
+            let paymentSystem = document.querySelector('.in2').value;
+            let cardNumber = document.querySelector('.in3').value;
+            let cardHolderName = document.querySelector('.in4').value;
+            let date = document.querySelector('.in5').value;
+
+            
+            let table = document.querySelector('table');
+
+            let newRow = table.insertRow(-1); 
+            let cell1 = newRow.insertCell(0);
+            let cell2 = newRow.insertCell(1);
+            let cell3 = newRow.insertCell(2);
+            let cell4 = newRow.insertCell(3);
+            let cell5 = newRow.insertCell(4);
+
+            cell1.innerText = bankName;
+            cell2.innerText = paymentSystem;
+            cell3.innerText = cardNumber;
+            cell4.innerText = cardHolderName;
+            cell5.innerText = date;
+
+            
+            document.getElementById("user").reset();
+}
+
+    </script>
+</body>
+</html>
